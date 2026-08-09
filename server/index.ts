@@ -1,11 +1,12 @@
 import cors from 'cors'
 import express from 'express'
 import helmet from 'helmet'
+import path from 'node:path'
 import { z } from 'zod'
 import { db } from './db.js'
 
 const app = express()
-const port = Number(process.env.ENGGXR_API_PORT || 4400)
+const port = Number(process.env.PORT || process.env.ENGGXR_API_PORT || 4400)
 const webOrigin = process.env.ENGGXR_WEB_ORIGIN || 'http://127.0.0.1:4399'
 
 app.use(helmet())
@@ -101,7 +102,10 @@ app.delete('/api/shortlists/:studentId/:collegeId', (req,res) => {
   res.status(204).end()
 })
 
-app.use((_req,res) => res.status(404).json({ error:{ code:'route_not_found', message:'API route not found.' } }))
+app.use('/api',(_req,res) => res.status(404).json({ error:{ code:'route_not_found', message:'API route not found.' } }))
 
-app.listen(port,'127.0.0.1',() => console.log(`EnggXR API listening on http://127.0.0.1:${port}`))
+const webDist = path.resolve(process.cwd(),'dist')
+app.use(express.static(webDist))
+app.get(/.*/,(_req,res) => res.sendFile(path.join(webDist,'index.html')))
 
+app.listen(port,'0.0.0.0',() => console.log(`EnggXR listening on port ${port}`))

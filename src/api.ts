@@ -1,7 +1,7 @@
 import type { College } from './data'
 import type { StudentProfile } from './ExtendedViews'
 
-const baseUrl = import.meta.env.VITE_ENGGXR_API_URL || 'http://127.0.0.1:4400'
+const baseUrl = import.meta.env.VITE_ENGGXR_API_URL || ''
 
 type ApiRecommendation = {
   id:number; name:string; short:string; location:string; branch:string; match:number;
