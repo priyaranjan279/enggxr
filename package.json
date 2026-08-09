@@ -11,7 +11,7 @@
     "build": "npm run check:api && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview --host 0.0.0.0",
-    "start": "tsx server/index.ts"
+    "start": "node server-dist/index.js"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "latest",
@@ -22,7 +22,6 @@
     "lucide-react": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "tsx": "^4.23.11",
     "zod": "^4.4.3"
   },
   "devDependencies": {
@@ -40,6 +39,7 @@
     "globals": "latest",
     "typescript": "latest",
     "typescript-eslint": "latest",
+    "tsx": "^4.23.11",
     "vite": "latest"
   }
 }
