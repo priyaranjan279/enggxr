@@ -1,0 +1,14 @@
+node_modules/
+dist/
+data/
+.env
+*.log
+*.tsbuildinfo
+.design-references/
+.prototype-reference/
+.codex-spreadsheet-read/
+*.zip
+*.xlsx
+*.jpeg
+/Engg Logo.png
+/logowhite.png
