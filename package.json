@@ -11,7 +11,7 @@
     "build": "npm run check:api && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview --host 0.0.0.0",
-    "start": "node server-dist/index.js"
+    "start": "node server.js"
   },
   "dependencies": {
     "@fontsource-variable/manrope": "latest",
