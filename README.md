@@ -11,6 +11,10 @@ EnggXR is a decision-support web app for engineering applicants and their famili
 
 The API runs at `http://127.0.0.1:4400` and stores local development data in `data/enggxr.db`.
 
+## Mobile app
+
+The Android and iOS app is in `mobile/`. Run `npm install` and `npm start` from that folder to launch the Expo development server. See `mobile/README.md` for the current mobile milestone.
+
 ## Quality checks
 
 - `npm run lint`
