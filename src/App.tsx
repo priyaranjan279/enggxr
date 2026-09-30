@@ -118,7 +118,7 @@ function PublicHome({ onSignIn, onStart }: { onSignIn:()=>void; onStart:()=>void
       <section className="public-hero">
         <div className="hero-copy">
           <span className="hero-kicker"><i/> ENGINEERING ADMISSIONS, MADE CLEAR</span>
-          <h1>Choose the right college.<br/><em>Know why.</em></h1>
+          <h1>Choose the right college.<br/><em>Know how.</em></h1>
           <p>Enter your rank, goals, and budget. EnggXR uses them to produce a college shortlist with reasons for each result.</p>
           <div className="hero-actions"><button className="hero-primary" onClick={onStart}>Find my college matches <ArrowRight size={18}/></button><a href="#how">See how EnggXR works</a></div>
           <div className="hero-assurance"><span><Check size={15}/> No payment required</span><span><Check size={15}/> Takes about 4 minutes</span><span><Check size={15}/> Estimates, never guarantees</span></div>
